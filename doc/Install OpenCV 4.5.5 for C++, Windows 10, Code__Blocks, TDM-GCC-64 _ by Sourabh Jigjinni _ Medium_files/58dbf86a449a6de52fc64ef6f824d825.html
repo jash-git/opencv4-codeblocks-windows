@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/58dbf86a449a6de52fc64ef6f824d825 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>OpenCV start webcam – Medium</title><meta name="description" content="OpenCV start webcam. GitHub Gist: instantly share code, notes, and snippets."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./accd859a3d81beda2ca18b1f42e3adfa.js.下載" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-26d88def9f88.css"><div id="gist93273532" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-start_webcam-cpp" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-c  ">
+
+        
+<div class="js-check-bidi js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template"></template>
+<template class="js-line-alert-template"></template>
+
+  <table data-hpc="" class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="C++" data-tagsearch-path="start_webcam.cpp">
+        <tbody><tr>
+          <td id="file-start_webcam-cpp-L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-start_webcam-cpp-LC1" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span></td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-start_webcam-cpp-LC2" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>opencv2\highgui\highgui.hpp<span class="pl-pds">&gt;</span></span></td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-start_webcam-cpp-LC3" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>opencv2\opencv.hpp<span class="pl-pds">&gt;</span></span></td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-start_webcam-cpp-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-start_webcam-cpp-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-start_webcam-cpp-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">cv</span><span class="pl-k">;</span></td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-start_webcam-cpp-LC7" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-start_webcam-cpp-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-k">int</span> <span class="pl-en">main</span>() {</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-start_webcam-cpp-LC9" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-start_webcam-cpp-LC10" class="blob-code blob-code-inner js-file-line">	VideoCapture <span class="pl-smi">cap</span>(<span class="pl-c1">0</span>);</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-start_webcam-cpp-LC11" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">if</span> (!cap.<span class="pl-c1">isOpened</span>()) {</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-start_webcam-cpp-LC12" class="blob-code blob-code-inner js-file-line">		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>Error initializing video camera!<span class="pl-pds">"</span></span> &lt;&lt; endl;</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-start_webcam-cpp-LC13" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">return</span> -<span class="pl-c1">1</span>;</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-start_webcam-cpp-LC14" class="blob-code blob-code-inner js-file-line">	}</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-start_webcam-cpp-LC15" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-start_webcam-cpp-LC16" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">char</span>* windowName = <span class="pl-s"><span class="pl-pds">"</span>Webcam Feed<span class="pl-pds">"</span></span>;</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-start_webcam-cpp-LC17" class="blob-code blob-code-inner js-file-line">	<span class="pl-c1">namedWindow</span>(windowName, WINDOW_AUTOSIZE);</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-start_webcam-cpp-LC18" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L19" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-start_webcam-cpp-LC19" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">while</span> (<span class="pl-c1">1</span>) {</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L20" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-start_webcam-cpp-LC20" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L21" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-start_webcam-cpp-LC21" class="blob-code blob-code-inner js-file-line">		Mat frame;</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L22" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-start_webcam-cpp-LC22" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">bool</span> bSuccess = cap.<span class="pl-c1">read</span>(frame);</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L23" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="23"></td>
+          <td id="file-start_webcam-cpp-LC23" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L24" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="24"></td>
+          <td id="file-start_webcam-cpp-LC24" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span> (!bSuccess) {</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L25" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="25"></td>
+          <td id="file-start_webcam-cpp-LC25" class="blob-code blob-code-inner js-file-line">			cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>Error reading frame from camera feed<span class="pl-pds">"</span></span> &lt;&lt; endl;</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L26" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="26"></td>
+          <td id="file-start_webcam-cpp-LC26" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">break</span>;</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L27" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="27"></td>
+          <td id="file-start_webcam-cpp-LC27" class="blob-code blob-code-inner js-file-line">		}</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L28" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="28"></td>
+          <td id="file-start_webcam-cpp-LC28" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L29" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="29"></td>
+          <td id="file-start_webcam-cpp-LC29" class="blob-code blob-code-inner js-file-line">		<span class="pl-c1">imshow</span>(windowName, frame);</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L30" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="30"></td>
+          <td id="file-start_webcam-cpp-LC30" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">switch</span> (<span class="pl-c1">waitKey</span>(<span class="pl-c1">10</span>)) {</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L31" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="31"></td>
+          <td id="file-start_webcam-cpp-LC31" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">case</span> <span class="pl-c1">27</span>:</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L32" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="32"></td>
+          <td id="file-start_webcam-cpp-LC32" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">return</span> <span class="pl-c1">0</span>;</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L33" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="33"></td>
+          <td id="file-start_webcam-cpp-LC33" class="blob-code blob-code-inner js-file-line">		}</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L34" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="34"></td>
+          <td id="file-start_webcam-cpp-LC34" class="blob-code blob-code-inner js-file-line">	}</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L35" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="35"></td>
+          <td id="file-start_webcam-cpp-LC35" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">return</span> <span class="pl-c1">0</span>;</td>
+        </tr>
+        <tr>
+          <td id="file-start_webcam-cpp-L36" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="36"></td>
+          <td id="file-start_webcam-cpp-LC36" class="blob-code blob-code-inner js-file-line">}</td>
+        </tr>
+  </tbody></table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/greenboxinnovations/accd859a3d81beda2ca18b1f42e3adfa/raw/042e4325a135d8553de2beafb8bf4a017e70c58c/start_webcam.cpp" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/greenboxinnovations/accd859a3d81beda2ca18b1f42e3adfa#file-start_webcam-cpp" class="Link--inTextBlock">
+          start_webcam.cpp
+        </a>
+        hosted with ❤ by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script><script defer="" src="./vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;8cc1014e6fb78283&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true}},&quot;version&quot;:&quot;2024.8.0&quot;,&quot;token&quot;:&quot;0b5f665943484354a59c39c6833f7078&quot;}" crossorigin="anonymous"></script>
+</body></html>
